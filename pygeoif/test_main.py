@@ -719,7 +719,7 @@ class FeatureTestCase(unittest.TestCase):
         self.assertRaises(TypeError, geometry.FeatureCollection, None)
         self.assertEqual(len(list(self.fc.features)), 2)
         self.assertEqual(len(self.fc), 2)
-        self.assertEqual(self.fc.bounds, (-1.0, -1.0, 2.0, 2.0))
+        self.assertEqual(self.fc.bounds, (0.0, 0.0, 2.0, 2.0))
         self.assertEqual(self.fc.__geo_interface__,
                          geometry.as_shape(self.fc).__geo_interface__)
 
